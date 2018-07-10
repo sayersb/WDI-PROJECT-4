@@ -33,11 +33,11 @@ class AuthRegister extends React.Component {
           <input className="input" name="email" placeholder="Email" onChange={this.handleChange}/>
         </div>
         <div className="field">
-          <label className="password"></label>
+          <label className="password">Password</label>
           <input className="input" type="password" name="password" placeholder="Password" onChange={this.handleChange}/>
         </div>
         <div className="field">
-          <label className="passwordConfirmation"></label>
+          <label className="passwordConfirmation">Password Confirmation</label>
           <input className="input" type="password" name="passwordConfirmation" placeholder="passwordConfirmation" onChange={this.handleChange}/>
         </div>
         <button className="button">Submit</button>
