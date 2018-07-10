@@ -43,4 +43,9 @@ class AuthRegister extends React.Component {
       </form>
     );
   }
+
+
 }
+
+
+export default AuthRegister;
