@@ -17,10 +17,10 @@ app.use('/api', routes);
 
 app.use(errorHandler);
 
-app.use(express.static(`${__dirname}/public`));
-
-app.get('/*', (req, res) => res.sendFile(`${__dirname}/public/index.html`));
+// app.use(express.static(`${__dirname}/public`));
+//
+// app.get('/*', (req, res) => res.sendFile(`${__dirname}/public/index.html`));
 
 app.listen(port, () => console.log(`Express running on port ${port}`));
 
-module.exports = app;
+// module.exports = app;

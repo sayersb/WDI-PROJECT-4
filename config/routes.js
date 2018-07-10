@@ -12,7 +12,7 @@ router.route('/events/:id')
   .put(secureRoute, events.update)
   .delete(secureRoute, events.delete);
 
-router.post('/regsiter', auth.register);
+router.post('/register', auth.register);
 router.post('/login', auth.login);
 
 module.exports = router;

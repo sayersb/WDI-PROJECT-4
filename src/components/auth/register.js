@@ -12,7 +12,7 @@ class AuthRegister extends React.Component {
     axios({
       url: '/api/register',
       method: 'POST',
-      date: this.state
+      data: this.state
     })
       .then(() => this.props.history.push('/login'));
   }
