@@ -25,7 +25,7 @@ class EventsIndex extends React.Component {
   filteredEvents = (events) => {
     const re = new RegExp(this.state.search, 'i');
     return events.filter(event =>  {
-      return re.test(event.name) || re.test(event.crimes);
+      return re.test(event.name);
     });
   }
 
