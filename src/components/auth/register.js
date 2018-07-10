@@ -13,7 +13,8 @@ class AuthRegister extends React.Component {
       url: '/api/register',
       method: 'POST',
       date: this.state
-    });
+    })
+      .then(() => this.props.history.push('/login'));
   }
 
   handleChange = ({ target: { name, value }}) => {
