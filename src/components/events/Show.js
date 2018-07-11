@@ -33,16 +33,7 @@ class EventsShow extends React.Component {
     if(!this.state.event) return <h2 className="title is-2">Loading...</h2>;
     return (
 
-      //     <h3 className="title">Location</h3>
-      //     <GoogleMap location={this.state.event.location} />
-      //     <hr />
-      //
-      //     <h4 className="subtitle">{this.state.event.description}</h4>
-      //
-      //     <hr />
-      //
-      //
-      //
+
       //     <Link className="button" to={`/events/${this.state.event._id}/edit`}>Edit</Link>
       //     <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
       //   </div>
