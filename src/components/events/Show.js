@@ -34,7 +34,7 @@ class EventsShow extends React.Component {
     return (
       <div className="columns">
         <div className="column is-half">
-          <figure className="image">
+          <figure className="images">
             <img src={this.state.event.image} />
           </figure>
         </div>
