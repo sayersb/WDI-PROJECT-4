@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Auth from '../../lib/Auth';
 import GoogleMap from '../common/GoogleMap';
+import Carousel from 'nuka-carousel';
+
 
 class EventsShow extends React.Component {
 
@@ -67,6 +69,16 @@ class EventsShow extends React.Component {
         </div> */}
 
         <h1 className="title">Other Events you may also like</h1>
+
+
+        <Carousel className="recommended">
+          <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide1" />
+          <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide2" />
+          <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide3" />
+          <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide4" />
+          <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide5" />
+          <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide6" />
+        </Carousel>
       </div>
 
 
