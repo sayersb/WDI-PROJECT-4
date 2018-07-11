@@ -68,12 +68,14 @@ class EventsShow extends React.Component {
           </h3>
         </div>
 
-        <div className="columns">
-          <div className="">
-            <h3 className="title">Location</h3>
-            <GoogleMap location={this.state.event.location} />
-          </div>
-        </div>
+        {/* <div className="columns">
+          <div className="column is-offset-one-fifth"> */}
+        <h3 className="title">Location</h3>
+        <GoogleMap location={this.state.event.location} />
+        {/* </div>
+        </div> */}
+
+        <h1 className="title">Other Events you may also like</h1>
       </div>
 
 
