@@ -46,6 +46,20 @@ class EventsIndex extends React.Component {
   render() {
     return (
       <section>
+        <div className="filters">
+          <input className="input" placeholder="Search" onChange={this.handleSearch} />
+
+          <div className="control">
+            <div className="select is-fullwidth">
+              <select onChange={this.handleSort}>
+                <option value="name|asc">Name (A-Z)</option>
+                <option value="name|desc">Name (Z-A)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <hr />
+
         <div className="columns is-multiline">
           {this.sortedAndFilteredEvents().map(event =>
             <div key={event._id} className="column is-one-third-desktop is-half-tablet">

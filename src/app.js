@@ -13,6 +13,7 @@ import ProtectedRoute from './components/common/ProtectedRoute';
 import AuthRegister from './components/auth/Register';
 import Navbar from './components/common/Navbar';
 import FlashMessages from './components/common/FlashMessages';
+// import EventBrite from './components/common/EventBrite';
 
 import 'bulma';
 import './scss/style.scss';
