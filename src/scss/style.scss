@@ -1,10 +1,10 @@
 
-// google-map
+/* google-map*/
 .google-map {
   height: 400px;
 }
 
-// bulma cards on index.js page
+/* bulma cards on index.js page*/
 .card{
   height: 100%;
   width: 100%;
@@ -37,9 +37,28 @@
   }
 }
 
-// index page background styling
+/* index page background styling*/     // rgb(25,25,112) #191970;
 
 body{
-    background-color: #191970;
-    // rgb(25,25,112)
+  background: linear-gradient(#1488cc, #191970);
+  .stars {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+  background:url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:0;
+}
+}
+/* text color*/
+.subtitle{
+  color: white;
+}
+
+.title{
+  color:white;
 }

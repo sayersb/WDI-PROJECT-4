@@ -47,7 +47,7 @@ class EventsShow extends React.Component {
           <GoogleMap location={this.state.event.location} />
           <hr />
 
-          <h4 className="title">{this.state.event.description}</h4>
+          <h4 className="subtitle">{this.state.event.description}</h4>
 
           <hr />
 
