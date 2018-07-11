@@ -1,7 +1,10 @@
+
+// google-map
 .google-map {
   height: 400px;
 }
 
+// bulma cards on index.js page
 .card{
   height: 100%;
   width: 100%;
@@ -34,7 +37,9 @@
   }
 }
 
-// .card-image{
-//   height: 100px;
-//   width: 100px;
-// }
+// index page background styling
+
+body{
+    background-color: #191970;
+    // rgb(25,25,112)
+}

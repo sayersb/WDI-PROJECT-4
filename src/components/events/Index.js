@@ -45,7 +45,7 @@ class EventsIndex extends React.Component {
 
   render() {
     return (
-      <section>
+      <section className="index">
         <div className="columns is-multiline">
           {this.sortedAndFilteredEvents().map(event =>
             <div key={event._id} className="column is-one-third-desktop is-half-tablet">
