@@ -25,6 +25,12 @@ mongoose.connect(dbURI, (err, db) => {
       image: 'https://media.timeout.com/images/102150183/1372/772/image.jpg',
       description: 'Consistently one of the finest festivals in London, catering for cool kids and party monsters alike, Lovebox 2018 packs as much fun into two days as many festivals manage in three. After 13 years in east London’s Victoria Park, Lovebox is heading south for 2018, to Gunnersbury Park. It’s a change in location, but the music policy will no doubt remain the same eclectic, enticing mix of, well, everything really – from DJs to arty bands to feelgood pop to indie, plus the usual mix of kooky entertainment and activities alongside.',
       location: { lat: 51.498204, lng: -0.292464 }
+    }, {
+      name: 'July React London Meetup',
+      date: '2018-07-31',
+      image: 'https://rb-website.cdn.prismic.io/rb-website/a337ea29ee9e837e6401a2d002e20a5978ca3eaa_react-poster.jpg',
+      description: 'React is having a huge impact on the way we think about Web UI development. These monthly Meetups are an opportunity to learn why and share experiences. This is a sociable group and very welcoming to newcomers',
+      location: { lat: 51.5169128, lng: -0.1364268 }
     }]))
     .then(events => console.log(`${events.length} events created`))
     .catch(err => console.log(err))
