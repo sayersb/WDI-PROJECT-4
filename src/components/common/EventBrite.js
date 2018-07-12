@@ -6,17 +6,18 @@ class EventBrite extends React.Component {
   constructor(){
     super();
     this.state = {
-      events: {}
+      events: []
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
 
     axios({
+      // url: '/api/events',
       url: 'https://www.eventbriteapi.com/v3/events/search/?token=GCNM4QYTQLWS4PPKTC26',
       method: 'GET'
     })
-      .then(res => this.setState({ events: res.data }, () => console.log(this.state)));
+      .then(res => this.setState({ events: res.data.events }, () => console.log(this.state)));
 
   }
 
@@ -25,7 +26,12 @@ class EventBrite extends React.Component {
       <section className="section">
         <div className="container">
           <h1 className="title"> EVENTS </h1>
-          <h2 key={this.state.events}>{this.state.events}</h2>
+          {this.state.events.map(event =>
+            <div key={event.id}>{event.name.text}</div>
+          )}
+          {this.state.events.map(event =>
+            <div key={event.id}>{event.url}</div>
+          )}
 
         </div>
       </section>
