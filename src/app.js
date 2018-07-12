@@ -13,7 +13,7 @@ import ProtectedRoute from './components/common/ProtectedRoute';
 import AuthRegister from './components/auth/Register';
 import Navbar from './components/common/Navbar';
 import FlashMessages from './components/common/FlashMessages';
-// import EventBrite from './components/common/EventBrite';
+import EventBrite from './components/common/EventBrite';
 
 import 'bulma';
 import './scss/style.scss';
@@ -37,6 +37,7 @@ class App extends React.Component {
                 <Route path="/events" component={EventsIndex} />
                 <Route path="/login" component={AuthLogin} />
                 <Route path="/register" component={AuthRegister} />
+                <Route exact path="/" component={EventBrite} />
                 <Route exact path="/" component={About} />
                 <Route component={NotFound} />
               </Switch>
