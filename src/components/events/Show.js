@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Auth from '../../lib/Auth';
 import GoogleMap from '../common/GoogleMap';
+import Carousel from 'nuka-carousel';
+
 
 class EventsShow extends React.Component {
 
@@ -33,16 +35,7 @@ class EventsShow extends React.Component {
     if(!this.state.event) return <h2 className="title is-2">Loading...</h2>;
     return (
 
-      //     <h3 className="title">Location</h3>
-      //     <GoogleMap location={this.state.event.location} />
-      //     <hr />
-      //
-      //     <h4 className="subtitle">{this.state.event.description}</h4>
-      //
-      //     <hr />
-      //
-      //
-      //
+
       //     <Link className="button" to={`/events/${this.state.event._id}/edit`}>Edit</Link>
       //     <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
       //   </div>
@@ -56,6 +49,7 @@ class EventsShow extends React.Component {
           </div>
           <div className="column">
             <h2 className="title">{this.state.event.name}</h2>
+            <h3 className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
           </div>
         </div>
 
@@ -75,7 +69,19 @@ class EventsShow extends React.Component {
         {/* </div>
         </div> */}
 
+        <h4 className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h4>
+
         <h1 className="title">Other Events you may also like</h1>
+
+        <div className="columns">
+          <div className="column is-half is-offset-one-quarter">
+            <Carousel>
+              <img src="https://countryclones.com/wp-content/uploads/2017/11/2018-country-concerts.png" />
+              <img src="https://data1.ibtimes.co.in/cache-img-0-450/en/full/692210/1530683754_harry-kane-celebrating-his-goal-vs-colombia.jpg" />
+              <img src="https://www.theontarion.com/wp-content/uploads/2017/02/Rapters_kyliearmishaw.jpg" />
+            </Carousel>
+          </div>
+        </div>
       </div>
 
 
