@@ -10,6 +10,13 @@
   width: 100%;
   border-style: outset;
   border-color: #AD974F;
+  .image{
+  display: flex;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
 }
 
 .card:hover {
@@ -52,8 +59,14 @@ body{
   display:block;
   background:url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
   z-index:0;
+  }
 }
-}
+
+
+
+
+
+
 /* text color*/
 .subtitle{
   color: white;
