@@ -1,6 +1,7 @@
 /* global google */
 import React from 'react';
 
+
 class GoogleMap extends React.Component {
 
   componentDidMount() {
@@ -13,6 +14,15 @@ class GoogleMap extends React.Component {
     this.marker = new google.maps.Marker({
       map: this.map,
       position: this.props.location
+    });
+
+    const autocomplete = new google.maps.places.Autocomplete(this.mapCanvas[0]);
+
+    autocomplete.addListener('place_changed', () => {
+      const place = autocomplete.getPlace();
+      const location = place.geometry.location.toJSON();
+      this.state.updateLocation({ location });
+      this.setState(place.formatted_address);
     });
   }
 
@@ -27,7 +37,9 @@ class GoogleMap extends React.Component {
 
   render() {
     return (
+
       <div className="google-map" ref={element => this.mapCanvas = element } />
+
     );
   }
 }
