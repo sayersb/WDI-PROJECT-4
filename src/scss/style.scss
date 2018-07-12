@@ -90,3 +90,15 @@ h1{
 h4{
   text-align: center;
 }
+
+.heading{
+  background: #ccc;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 10px;
+  font-size: 30px;
+  padding-left: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
