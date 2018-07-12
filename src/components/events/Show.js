@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Auth from '../../lib/Auth';
 import GoogleMap from '../common/GoogleMap';
-import Carousel from 'nuka-carousel';
+import Slider from 'react-slick';
 
 
 class EventsShow extends React.Component {
@@ -33,9 +33,14 @@ class EventsShow extends React.Component {
   render() {
     if(this.state.error) return <h2 className="title is-2">{this.state.error}</h2>;
     if(!this.state.event) return <h2 className="title is-2">Loading...</h2>;
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 1
+    };
     return (
-
-
       //     <Link className="button" to={`/events/${this.state.event._id}/edit`}>Edit</Link>
       //     <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
       //   </div>
@@ -75,14 +80,17 @@ class EventsShow extends React.Component {
 
         <div className="columns">
           <div className="column is-half is-offset-one-quarter">
-            <Carousel>
+            <Slider {...settings}>
+              <img src="https://somoconcerts.com/wp-content/uploads/2018/03/SOMO_Slider_1800_crowd_3-0x0.jpg" />
               <img src="https://countryclones.com/wp-content/uploads/2017/11/2018-country-concerts.png" />
               <img src="https://data1.ibtimes.co.in/cache-img-0-450/en/full/692210/1530683754_harry-kane-celebrating-his-goal-vs-colombia.jpg" />
-              <img src="https://www.theontarion.com/wp-content/uploads/2017/02/Rapters_kyliearmishaw.jpg" />
-            </Carousel>
+
+            </Slider>
           </div>
         </div>
       </div>
+
+
 
 
     );
