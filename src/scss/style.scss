@@ -10,6 +10,13 @@
   width: 100%;
   border-style: outset;
   border-color: #AD974F;
+  .image{
+    display: flex;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .card:hover {
@@ -37,23 +44,26 @@
   }
 }
 
-/* index page background styling*/     // rgb(25,25,112) #191970;
+/* index page background styling*/
 
 body{
   background: linear-gradient(#1488cc, #191970);
+  // width:1700px;
+  // height:1000px;
   .stars {
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  height:100%;
-  display:block;
-  background:url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-  z-index:0;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:block;
+    background:url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
+    z-index:0;
+  }
 }
-}
+
 /* text color*/
 .subtitle{
   color: white;
@@ -67,8 +77,8 @@ body{
   color: white;
 }
 
-/* show page*/
 
+/* show page*/
 .images{
   height: 700px;
   width: 700px;
@@ -76,4 +86,19 @@ body{
 
 h1{
   text-align: center;
+}
+h4{
+  text-align: center;
+}
+
+.heading{
+  background: #ccc;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 10px;
+  font-size: 30px;
+  padding-left: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
 }
