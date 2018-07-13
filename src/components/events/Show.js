@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Auth from '../../lib/Auth';
 import GoogleMap from '../common/GoogleMap';
 import Slider from 'react-slick';
-import Sticky from 'react-sticky-state';
+// import Sticky from 'react-sticky-state';
 
 
 class EventsShow extends React.Component {
@@ -18,8 +18,8 @@ class EventsShow extends React.Component {
 
   componentDidMount() {
     axios.get(`/api/events/${this.props.match.params.id}`)
-    .then( res => this.setState({ event: res.data }))
-    .catch(err => this.setState({ error: err.message }));
+      .then( res => this.setState({ event: res.data }))
+      .catch(err => this.setState({ error: err.message }));
   }
 
   handleDelete = () => {
@@ -28,7 +28,7 @@ class EventsShow extends React.Component {
       method: 'DELETE',
       headers: { Authorization: `Bearer ${Auth.getToken()}` }
     })
-    .then(() => this.props.history.push('/events'));
+      .then(() => this.props.history.push('/events'));
   }
 
   render() {
@@ -39,7 +39,9 @@ class EventsShow extends React.Component {
       infinite: true,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      // slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000
 
     };
     return (
@@ -61,9 +63,6 @@ class EventsShow extends React.Component {
             </div>
           </div>
           <div className="heading">A</div>
-
-
-
 
           <div className="columns">
             <div className="column is-four-fifths">
