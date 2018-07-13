@@ -4,6 +4,8 @@ import axios from 'axios';
 import Auth from '../../lib/Auth';
 import GoogleMap from '../common/GoogleMap';
 import Slider from 'react-slick';
+import AudioImage from '../common/AudioImage';
+import Promise from 'bluebird';
 // import Sticky from 'react-sticky-state';
 // import { Player } from 'video-react';
 
@@ -14,13 +16,17 @@ class EventsShow extends React.Component {
   constructor() {
     super();
     this.state ={
-
+      event: {},
+      events: []
     };
   }
 
   componentDidMount() {
-    axios.get(`/api/events/${this.props.match.params.id}`)
-      .then( res => this.setState({ event: res.data }))
+    Promise.props({
+      event: axios.get(`/api/events/${this.props.match.params.id}`).then(res => res.data),
+      events: axios.get('/api/events').then(res => res.data.filter((event, i) => i % 3 === 0))
+    })
+      .then(data => this.setState(data))
       .catch(err => this.setState({ error: err.message }));
   }
 
@@ -37,14 +43,9 @@ class EventsShow extends React.Component {
     if(this.state.error) return <h2 className="title is-2">{this.state.error}</h2>;
     if(!this.state.event) return <h2 className="title is-2">Loading...</h2>;
     const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000
-
+      centerMode: true,
+      centerPadding: '60px',
+      slidesToShow: 1
     };
     return (
       //     <Link className="button" to={`/events/${this.state.event._id}/edit`}>Edit</Link>
@@ -55,9 +56,7 @@ class EventsShow extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column is-four-fifths">
-              <figure className="images">
-                <img src={this.state.event.image} />
-              </figure>
+              <AudioImage imageSrc={this.state.event.image} audioSrc={'/assets/applause.mp3'}/>
             </div>
             <div className="column">
               <h2 className="title">{this.state.event.name}</h2>
@@ -89,18 +88,23 @@ class EventsShow extends React.Component {
           <div className="columns">
             <div className="column is-half is-offset-one-quarter">
               <Slider {...settings}>
-                <div className="card">
-                  <div className="card-image">
-                    <figure className="image">
-                      <img src={event.image} />
-                    </figure>
-                  </div>
-                  <div className="card-content">
-                    <div className="content">
-                      <h2 className="title">{event.name}</h2>
+                {/* <Player>
+                  <source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
+                </Player> */}
+                {this.state.events.map(event =>
+                  <div key={event._id} className="card">
+                    <div className="card-image">
+                      <figure className="image">
+                        <img src={event.image} />
+                      </figure>
+                    </div>
+                    <div className="card-content">
+                      <div className="content">
+                        <h2 className="title">{event.name}</h2>
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
               </Slider>
             </div>
           </div>
