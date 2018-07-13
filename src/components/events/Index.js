@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
+import Search from '../../components/common/Search';
 
 class EventsIndex extends React.Component {
 
@@ -45,41 +46,45 @@ class EventsIndex extends React.Component {
 
   render() {
     return (
-      <section>
-        <div className="filters">
-          <input className="input" placeholder="Search" onChange={this.handleSearch} />
 
-          <div className="control">
-            <div className="select is-fullwidth">
-              <select onChange={this.handleSort}>
-                <option value="name|asc">Name (A-Z)</option>
-                <option value="name|desc">Name (Z-A)</option>
-              </select>
+      <section>
+        <Search />
+        <section>
+          <div className="filters">
+            <input className="input" placeholder="Search" onChange={this.handleSearch} />
+
+            <div className="control">
+              <div className="select is-fullwidth">
+                <select onChange={this.handleSort}>
+                  <option value="name|asc">Name (A-Z)</option>
+                  <option value="name|desc">Name (Z-A)</option>
+                </select>
+              </div>
             </div>
           </div>
-        </div>
-        <hr />
+          <hr />
 
-        <div className="columns is-multiline">
-          {this.sortedAndFilteredEvents().map(event =>
-            <div key={event._id} className="column is-one-third-desktop is-half-tablet">
-              <Link to={`/events/${event._id}`}>
-                <div className="card">
-                  <div className="card-image">
-                    <figure className="image">
-                      <img src={event.image} />
-                    </figure>
-                  </div>
-                  <div className="card-content">
-                    <div className="content">
-                      <h2 className="title">{event.name}</h2>
+          <div className="columns is-multiline">
+            {this.sortedAndFilteredEvents().map(event =>
+              <div key={event._id} className="column is-one-third-desktop is-half-tablet">
+                <Link to={`/events/${event._id}`}>
+                  <div className="card">
+                    <div className="card-image">
+                      <figure className="image">
+                        <img src={event.image} />
+                      </figure>
+                    </div>
+                    <div className="card-content">
+                      <div className="content">
+                        <h2 className="title">{event.name}</h2>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
-            </div>
-          )}
-        </div>
+                </Link>
+              </div>
+            )}
+          </div>
+        </section>
       </section>
 
     );
