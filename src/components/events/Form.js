@@ -1,6 +1,7 @@
 import React from 'react';
+import GoogleAutocomplete from '../common/GoogleAutocomplete';
 
-const eventsForm = ({ handleChange, handleSubmit, data }) => {
+const eventsForm = ({ handleChange, handleSubmit, data, updateLocation }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="field">
@@ -25,7 +26,7 @@ const eventsForm = ({ handleChange, handleSubmit, data }) => {
       </div>
       <div className="field">
         <label className="label">Location</label>
-        <input className="input" name="location" placeholder="Location" onChange={handleChange} value={data.location || ''} />
+        <GoogleAutocomplete updateLocation={updateLocation} />
         {data.errors.location && <small>{data.errors.location}</small>}
       </div>
 

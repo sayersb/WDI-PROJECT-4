@@ -18,8 +18,8 @@ class EventsShow extends React.Component {
 
   componentDidMount() {
     axios.get(`/api/events/${this.props.match.params.id}`)
-    .then( res => this.setState({ event: res.data }))
-    .catch(err => this.setState({ error: err.message }));
+      .then( res => this.setState({ event: res.data }))
+      .catch(err => this.setState({ error: err.message }));
   }
 
   handleDelete = () => {
@@ -28,7 +28,7 @@ class EventsShow extends React.Component {
       method: 'DELETE',
       headers: { Authorization: `Bearer ${Auth.getToken()}` }
     })
-    .then(() => this.props.history.push('/events'));
+      .then(() => this.props.history.push('/events'));
   }
 
   render() {
@@ -92,6 +92,21 @@ class EventsShow extends React.Component {
                 <img src="https://countryclones.com/wp-content/uploads/2017/11/2018-country-concerts.png" />
                 <img src="https://data1.ibtimes.co.in/cache-img-0-450/en/full/692210/1530683754_harry-kane-celebrating-his-goal-vs-colombia.jpg" />
               </Slider>
+
+
+
+              <div id="mc_embed_signup">
+                <form action="https://github.us18.list-manage.com/subscribe/post?u=59db66124013cd520fd3937ea&amp;id=7312abcb99" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+                  <div id="mc_embed_signup_scroll">
+                    <label htmlFor="mce-EMAIL">Subscribe to our mailing list</label>
+                    <input type="email" value="" name="EMAIL" className="email" id="mce-EMAIL" placeholder="email address" required>
+                    </input>
+                    <div aria-hidden="true"><input name="b_59db66124013cd520fd3937ea_7312abcb99" tabIndex="-1" value=""></input></div>
+                    <div className="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"></input></div>
+                  </div>
+                </form>
+              </div>
+
             </div>
           </div>
         </div>
