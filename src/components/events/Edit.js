@@ -20,6 +20,10 @@ class EventsEdit extends React.Component {
         this.setState({ [name]: value });
       }
 
+      updateLocation = location => {
+        this.setState({ location }, () => console.log(this.state));
+      }
+
   handleSubmit = (e) => {
     e.preventDefault();
     axios({

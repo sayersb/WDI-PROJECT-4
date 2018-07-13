@@ -22,11 +22,16 @@ class EventsShow extends React.Component {
   }
 
   componentDidMount() {
+<<<<<<< HEAD
     Promise.props({
       event: axios.get(`/api/events/${this.props.match.params.id}`).then(res => res.data),
       events: axios.get('/api/events').then(res => res.data.filter((event, i) => i % 3 === 0))
     })
       .then(data => this.setState(data))
+=======
+    axios.get(`/api/events/${this.props.match.params.id}`)
+      .then( res => this.setState({ event: res.data }))
+>>>>>>> auto
       .catch(err => this.setState({ error: err.message }));
   }
 
@@ -106,6 +111,21 @@ class EventsShow extends React.Component {
                   </div>
                 )}
               </Slider>
+
+
+
+              <div id="mc_embed_signup">
+                <form action="https://github.us18.list-manage.com/subscribe/post?u=59db66124013cd520fd3937ea&amp;id=7312abcb99" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+                  <div id="mc_embed_signup_scroll">
+                    <label htmlFor="mce-EMAIL">Subscribe to our mailing list</label>
+                    <input type="email" value="" name="EMAIL" className="email" id="mce-EMAIL" placeholder="email address" required>
+                    </input>
+                    <div aria-hidden="true"><input name="b_59db66124013cd520fd3937ea_7312abcb99" tabIndex="-1" value=""></input></div>
+                    <div className="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"></input></div>
+                  </div>
+                </form>
+              </div>
+
             </div>
           </div>
         </div>
