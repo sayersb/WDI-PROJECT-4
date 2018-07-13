@@ -5,6 +5,8 @@ import Auth from '../../lib/Auth';
 import GoogleMap from '../common/GoogleMap';
 import Slider from 'react-slick';
 // import Sticky from 'react-sticky-state';
+// import { Player } from 'video-react';
+
 
 
 class EventsShow extends React.Component {
