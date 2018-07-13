@@ -39,7 +39,7 @@ class EventsShow extends React.Component {
       infinite: true,
       speed: 500,
       slidesToShow: 1,
-      // slidesToScroll: 1,
+      slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 2000
 
@@ -87,9 +87,18 @@ class EventsShow extends React.Component {
           <div className="columns">
             <div className="column is-half is-offset-one-quarter">
               <Slider {...settings}>
-                <img src="https://somoconcerts.com/wp-content/uploads/2018/03/SOMO_Slider_1800_crowd_3-0x0.jpg" />
-                <img src="https://countryclones.com/wp-content/uploads/2017/11/2018-country-concerts.png" />
-                <img src="https://data1.ibtimes.co.in/cache-img-0-450/en/full/692210/1530683754_harry-kane-celebrating-his-goal-vs-colombia.jpg" />
+                <div className="card">
+                  <div className="card-image">
+                    <figure className="image">
+                      <img src={event.image} />
+                    </figure>
+                  </div>
+                  <div className="card-content">
+                    <div className="content">
+                      <h2 className="title">{event.name}</h2>
+                    </div>
+                  </div>
+                </div>
               </Slider>
             </div>
           </div>
