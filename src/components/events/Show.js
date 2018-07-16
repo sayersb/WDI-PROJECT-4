@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Auth from '../../lib/Auth';
 import GoogleMap from '../common/GoogleMap';
 import Slider from 'react-slick';
@@ -56,7 +56,7 @@ class EventsShow extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column is-four-fifths">
-              <AudioImage imageSrc={this.state.event.image} audioSrc={'/assets/applause.mp3'}/>
+              <AudioImage className="audio-image" imageSrc={this.state.event.image} audioSrc={'/assets/applause.mp3'}/>
             </div>
             <div className="column">
               <h2 className="title">{this.state.event.name}</h2>
@@ -91,6 +91,7 @@ class EventsShow extends React.Component {
                 {/* <Player>
                   <source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
                 </Player> */}
+                {/* <Link to={`/events/${event._id}`}> */}
                 {this.state.events.map(event =>
                   <div key={event._id} className="card">
                     <div className="card-image">
@@ -105,6 +106,7 @@ class EventsShow extends React.Component {
                     </div>
                   </div>
                 )}
+                {/* </Link> */}
               </Slider>
             </div>
           </div>
