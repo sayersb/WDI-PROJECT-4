@@ -56,8 +56,7 @@
     "react-select": "^1.2.1",
     "react-slick": "^0.23.1",
     "react-sticky-state": "^2.1.9",
-    "redux": "^4.0.0",
-    "sinon": "^6.1.3",
-    "video-react": "^0.13.0"
+    "select2": "^4.0.6-rc.1",
+    "sinon": "^6.1.3"
   }
 }

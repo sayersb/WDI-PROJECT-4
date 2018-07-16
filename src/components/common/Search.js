@@ -24,6 +24,15 @@ class Search extends Component {
       });
   }
 
+  handleClick(result) {
+    axios.get(`https://app.ticketmaster.com/discovery/v2/${result.id}`)
+      .then(res => this.setState({name: res.data.name }))
+      .then(res => this.setState({date: res.data.eventdate }));
+  }
+
+
+
+
   debouncedSearch = _.debounce(this.search, 500);
 
   handleChange = ({ target: { value }}) => {
