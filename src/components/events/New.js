@@ -8,7 +8,6 @@ import EventsForm from './Form';
 class EventsNew extends React.Component {
 
   state = {
-    selectedOptions: [],
     errors: {}
   };
 
@@ -31,6 +30,10 @@ class EventsNew extends React.Component {
     this.setState({ [name]: value });
   }
 
+  updateLocation = location => {
+    this.setState({ location }, () => console.log(this.state));
+  }
+
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -51,6 +54,7 @@ class EventsNew extends React.Component {
         handleSelectChange={this.handleSelectChange}
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
+        updateLocation={this.updateLocation}
         data={this.state}
       />
     );
