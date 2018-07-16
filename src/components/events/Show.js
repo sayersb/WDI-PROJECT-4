@@ -41,6 +41,9 @@ class EventsShow extends React.Component {
     })
       .then(() => this.props.history.push('/events'));
   }
+  handleSuccessfulPayment() {
+
+  }
 
   render() {
     if(this.state.error) return <h2 className="title is-2">{this.state.error}</h2>;
@@ -92,7 +95,7 @@ class EventsShow extends React.Component {
               <h3 className="title">Description</h3>
               <h4 className="subtitle">{this.state.event.description}</h4>
             </div>
-            <h3 className="subtitle">
+            <h3 className="paypal">
               <PayPalButton
                 amount={this.state.price}
                 description={this.state.name}
