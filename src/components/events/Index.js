@@ -58,6 +58,7 @@ class EventsIndex extends React.Component {
                 <select onChange={this.handleSort}>
                   <option value="name|asc">Name (A-Z)</option>
                   <option value="name|desc">Name (Z-A)</option>
+                  <option value="type|asc">Event type</option>
                 </select>
               </div>
             </div>
@@ -77,6 +78,7 @@ class EventsIndex extends React.Component {
                     <div className="card-content">
                       <div className="content">
                         <h2 className="title">{event.name}</h2>
+                        <h4 className="subtitle">{event.type}</h4>
                       </div>
                     </div>
                   </div>
