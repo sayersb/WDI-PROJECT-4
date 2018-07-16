@@ -7,7 +7,7 @@ class PayPalButton extends React.Component {
     paypal.Button.render({
       env: 'sandbox',
       client: {
-        sandbox: 'access_token$sandbox$ktn2r9x5bhsxx29z$942906951467897d82b8aeaf89848e2e'
+        sandbox: 'AU_mYjIkfpdm9UnQ7gQNzfjiKbAjqSMFPPpi7AchIM03oxmkPrfp5UktBkW43Igp1ItZUtD5jxSe8vTF'
       },
       payment: (data, actions) => {
         return actions.payment.create({
