@@ -1,4 +1,4 @@
-/* global paypal */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import scriptLoader from 'react-async-script-loader';
