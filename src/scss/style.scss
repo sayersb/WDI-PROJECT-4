@@ -102,3 +102,31 @@ h4{
   position: sticky;
   top: 0px;
 }
+
+
+/* form text */
+.label{
+  color:white;
+}
+
+.homepage {
+  background-color: black;
+  img {
+    opacity: 0.25;
+    height: 600px;
+    width: 1800px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+}
+
+.mc_embed_signup{
+  background:#fff;
+  clear:left;
+  font-size:14px;
+  font-family: Helvetica,Arial,sans-serif;
+   width:100%;
+}
