@@ -4,9 +4,9 @@ const moment = require('moment');
 const eventSchema = new mongoose.Schema({
   name: { type: String, required: 'This field is required' },
   date: { type: Date, required: 'This field is required' },
-  startTime: { type: String, required: 'This field is required'},
-  type: { type: String, enum: ['Sport', 'Music', 'Learning', 'Theatre', 'Food & Drink', 'Gaming', 'Other'], required: 'This field is required' },
-  status: { type: String, enum: ['Buying', 'Selling', 'Just Looking'], required: 'This field is required' },
+  startTime: { type: String },
+  type: { type: String, enum: ['Sport', 'Music', 'Learning', 'Theatre', 'Food & Drink', 'Gaming', 'Other'] },
+  status: { type: String, enum: ['Buying', 'Selling', 'Just Looking'] },
   image: { type: String, required: 'This field is required' },
   description: { type: String, required: 'This field is required' },
   location: {
