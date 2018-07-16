@@ -12,7 +12,44 @@ const eventsForm = ({ handleChange, handleSubmit, data, updateLocation }) => {
       <div className="field">
         <label className="label">Date</label>
         <input className="input" type="date" name="date" placeholder="Date" onChange={handleChange} value={data.date || ''} />
-        {data.errors.name && <small>{data.errors.date}</small>}
+        {data.errors.date && <small>{data.errors.date}</small>}
+      </div>
+      <div className="field">
+        <label className="label">Start Time</label>
+        <input className="input" type="time" name="startTime" placeholder="Start" onChange={handleChange} value={data.startTime || ''} />
+        {data.errors.startTime && <small>{data.errors.startTime}</small>}
+      </div>
+      <div className="field">
+        <label className="label">Event Type</label>
+        <div className="control">
+          <div className="select is-fullwidth">
+            <select name="type" onChange={handleChange} value={data.type || ''}>
+              <option value="" disabled>Please choose</option>
+              <option>Sport</option>
+              <option>Music</option>
+              <option>Learning</option>
+              <option>Theatre</option>
+              <option>Food & Drink</option>
+              <option>Gaming</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        {data.errors.type && <small>{data.errors.type}</small>}
+      </div>
+      <div className="field">
+        <label className="label">Ticket Status</label>
+        <div className="control">
+          <div className="select is-fullwidth">
+            <select name="status" onChange={handleChange} value={data.status || ''}>
+              <option value="" disabled>Please choose</option>
+              <option>Buying</option>
+              <option>Selling</option>
+              <option>Just Looking</option>
+            </select>
+          </div>
+        </div>
+        {data.errors.status && <small>{data.errors.status}</small>}
       </div>
       <div className="field">
         <label className="label">Image</label>

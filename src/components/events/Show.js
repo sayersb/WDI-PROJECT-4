@@ -62,7 +62,12 @@ class EventsShow extends React.Component {
             </div>
             <div className="column">
               <h2 className="title">{this.state.event.name}</h2>
-              <h3 className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+              <hr />
+              <h3 className="subtitle">  {this.state.event.type}</h3>
+              <h3 className="subtitle"> {this.state.event.date}</h3>
+
+              <h3 className="subtitle"> Start Time : {this.state.event.startTime}</h3>
+              <h3 className="subtitle"> Ticket Status : {this.state.event.status}</h3>
             </div>
           </div>
 
