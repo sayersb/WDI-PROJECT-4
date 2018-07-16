@@ -58,6 +58,7 @@
     "react-slick": "^0.23.1",
     "react-sticky-header": "^0.1.9",
     "react-sticky-state": "^2.1.9",
+    "select2": "^4.0.6-rc.1",
     "sinon": "^6.1.3"
   }
 }
