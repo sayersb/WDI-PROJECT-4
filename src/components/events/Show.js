@@ -2,10 +2,11 @@ import React from 'react';
 import axios from 'axios';
 // import { Link } from 'react-router-dom';
 import Auth from '../../lib/Auth';
-import GoogleMap from '../common/GoogleMap';
 import Slider from 'react-slick';
-import AudioImage from '../common/AudioImage';
 import Promise from 'bluebird';
+import GoogleMap from '../common/GoogleMap';
+import AudioImage from '../common/AudioImage';
+import PayPalButton from '../common/PayPalButton';
 // import Sticky from 'react-sticky-state';
 // import { Player } from 'video-react';
 
@@ -91,7 +92,12 @@ class EventsShow extends React.Component {
               <h3 className="title">Description</h3>
               <h4 className="subtitle">{this.state.event.description}</h4>
             </div>
-            <h3 className="subtitle">  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <h3 className="subtitle">
+              <PayPalButton
+                amount={this.state.price}
+                description={this.state.name}
+                onSuccess={this.handleSuccessfulPayment}
+              />
             </h3>
           </div>
 
