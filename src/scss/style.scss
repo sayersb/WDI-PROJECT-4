@@ -48,6 +48,7 @@
 
 body{
   background: linear-gradient(#1488cc, #191970);
+  color:white;
   // width:1700px;
   // height:1000px;
   .stars {
@@ -141,4 +142,13 @@ h4{
   background-color: black;
   opacity: 0.25;
   color: white;
+}
+
+/* eventbrite */
+
+a {
+  color: #FFF;
+}
+a:hover {
+   color: #00F
 }
