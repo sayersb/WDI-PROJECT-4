@@ -47,15 +47,18 @@ class EventsIndex extends React.Component {
   render() {
     return (
 
+
+
       <section>
         <Search />
         <section>
           <div className="filters">
-            <input className="input" placeholder="Search" onChange={this.handleSearch} />
+            <input className="input" placeholder="Search our events..." onChange={this.handleSearch} />
 
             <div className="control">
               <div className="select is-fullwidth">
                 <select onChange={this.handleSort}>
+                  <option value="name|asc">Filter by...</option>
                   <option value="name|asc">Name (A-Z)</option>
                   <option value="name|desc">Name (Z-A)</option>
                   <option value="type|asc">Event type</option>
@@ -78,7 +81,8 @@ class EventsIndex extends React.Component {
                     <div className="card-content">
                       <div className="content">
                         <h2 className="title">{event.name}</h2>
-                        <h4 className="subtitle">{event.type}</h4>
+                        <h5 className="subtitle">{event.date}</h5>
+                        <h5 className="subtitle">Event type: {event.type}</h5>
                       </div>
                     </div>
                   </div>

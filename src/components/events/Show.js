@@ -31,6 +31,7 @@ class EventsShow extends React.Component {
     if(prevProps.location.pathname !== this.props.location.pathname) {
       axios.get(`/api/events/${this.props.match.params.id}`)
         .then(res => this.setState({ event: res.data }));
+      window.scrollTo(0, 0);
     }
   }
 
@@ -70,7 +71,7 @@ class EventsShow extends React.Component {
             <div className="column">
               <h2 className="title">{this.state.event.name}</h2>
               <hr />
-              <h3 className="subtitle">  {this.state.event.type}</h3>
+              <h3 className="subtitle">Event type: {this.state.event.type}</h3>
               <h3 className="subtitle"> {this.state.event.date}</h3>
 
               <h3 className="subtitle"> Start Time : {this.state.event.startTime}</h3>
