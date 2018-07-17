@@ -1,15 +1,13 @@
 import React from 'react';
 
-const Suggestions = ({ results }) => {
+const Suggestions = ({ results, eventPicked }) => {
   console.log(results);
   return (
-    <ul>
+    <select onChange={eventPicked}>
       {results.map(result =>
-        <li key={result.id}>
-          {result.name}
-        </li>
+        <option key={result._id} value={result.id}>{result.name}</option>
       )}
-    </ul>
+    </select>
   );
 };
 
