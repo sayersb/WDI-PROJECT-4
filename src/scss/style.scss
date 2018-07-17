@@ -141,7 +141,7 @@ h4{
 }
 .carousel-card {
   height: 320px;
-  width: 700px;
+  width: 500px;
   .image{
     display: flex;
     height: 200px;
@@ -149,6 +149,11 @@ h4{
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
+
+
+.slick-slide > div {
+    margin: 0 10px;
 }
 
 /* footer */
