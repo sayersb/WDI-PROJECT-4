@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Auth from '../../lib/Auth';
 import Slider from 'react-slick';
 import Promise from 'bluebird';
@@ -17,17 +17,11 @@ class EventsShow extends React.Component {
   constructor() {
     super();
     this.state ={
-      // event: {},
-      // events: []
+
     };
   }
 
   componentDidMount() {
-    Promise.props({
-      event: axios.get(`/api/events/${this.props.match.params.id}`).then(res => res.data),
-      events: axios.get('/api/events').then(res => res.data.filter((event, i) => i % 3 === 0))
-    })
-      .then(data => this.setState(data));
     axios.get(`/api/events/${this.props.match.params.id}`)
       .then( res => this.setState({ event: res.data }))
       .catch(err => this.setState({ error: err.message }));
@@ -49,9 +43,12 @@ class EventsShow extends React.Component {
     if(this.state.error) return <h2 className="title is-2">{this.state.error}</h2>;
     if(!this.state.event) return <h2 className="title is-2">Loading...</h2>;
     const settings = {
-      centerMode: true,
-      centerPadding: '60px',
-      slidesToShow: 1
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+
     };
     return (
       //     <Link className="button" to={`/events/${this.state.event._id}/edit`}>Edit</Link>
@@ -62,7 +59,9 @@ class EventsShow extends React.Component {
         <div className="container">
           <div className="columns">
             <div className="column is-four-fifths">
-              <AudioImage className="audio-image" imageSrc={this.state.event.image} audioSrc={'/assets/applause.mp3'}/>
+              <figure className="images">
+                <img src={this.state.event.image} />
+              </figure>
             </div>
             <div className="column">
               <h2 className="title">{this.state.event.name}</h2>
@@ -77,6 +76,8 @@ class EventsShow extends React.Component {
 
             </div>
           </div>
+          <div className="heading">A</div>
+
 
           <div className="heading">
 
@@ -115,9 +116,7 @@ class EventsShow extends React.Component {
           {/* </div>
           </div> */}
 
-          {/* <h4 className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h4> */}
-
-          <hr />
+          <h4 className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h4>
 
           <h1 className="title">Other events you may also like</h1>
 
