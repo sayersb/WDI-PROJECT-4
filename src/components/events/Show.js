@@ -72,6 +72,8 @@ class EventsShow extends React.Component {
 
               <h3 className="subtitle"> Start Time : {this.state.event.startTime}</h3>
               <h3 className="subtitle"> Ticket Status : {this.state.event.status}</h3>
+              <h3 className="subtitle"> Price : {this.state.price}</h3>
+
             </div>
           </div>
 
