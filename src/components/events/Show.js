@@ -5,7 +5,7 @@ import Auth from '../../lib/Auth';
 import Slider from 'react-slick';
 import Promise from 'bluebird';
 import GoogleMap from '../common/GoogleMap';
-import AudioImage from '../common/AudioImage';
+// import AudioImage from '../common/AudioImage';
 import PayPalButton from '../common/PayPalButton';
 
 
@@ -59,7 +59,10 @@ class EventsShow extends React.Component {
        <div className="container">
          <div className="columns">
            <div className="column is-four-fifths">
-             <AudioImage className="audio-image" imageSrc={this.state.event.image} audioSrc={'/assets/applause.mp3'}/>
+             {/* <AudioImage className="audio-image top-image" imageSrc={this.state.event.image} audioSrc={'/assets/applause.mp3'}/> */}
+             <figure className="image top-image">
+               <img src={this.state.event.image} />
+             </figure>
            </div>
            <div className="column">
              <h2 className="title">{this.state.event.name}</h2>
@@ -122,7 +125,7 @@ class EventsShow extends React.Component {
                </Player> */}
                {/* <Link to={`/events/${event._id}`}> */}
                {this.state.events.map(event =>
-                 <div key={event._id} className="card">
+                 <div key={event._id} className="card carousel-card">
                    <div className="card-image">
                      <figure className="image">
                        <img src={event.image} />
