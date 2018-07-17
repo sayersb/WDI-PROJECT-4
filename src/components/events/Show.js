@@ -2,9 +2,14 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Auth from '../../lib/Auth';
-import GoogleMap from '../common/GoogleMap';
 import Slider from 'react-slick';
-import Sticky from 'react-sticky-state';
+import Promise from 'bluebird';
+import GoogleMap from '../common/GoogleMap';
+import AudioImage from '../common/AudioImage';
+import PayPalButton from '../common/PayPalButton';
+// import Sticky from 'react-sticky-state';
+// import { Player } from 'video-react';
+
 
 
 class EventsShow extends React.Component {
@@ -29,6 +34,9 @@ class EventsShow extends React.Component {
       headers: { Authorization: `Bearer ${Auth.getToken()}` }
     })
       .then(() => this.props.history.push('/events'));
+  }
+  handleSuccessfulPayment() {
+
   }
 
   render() {
@@ -57,12 +65,35 @@ class EventsShow extends React.Component {
             </div>
             <div className="column">
               <h2 className="title">{this.state.event.name}</h2>
-              <h3 className="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+              <hr />
+              <h3 className="subtitle">  {this.state.event.type}</h3>
+              <h3 className="subtitle"> {this.state.event.date}</h3>
+
+              <h3 className="subtitle"> Start Time : {this.state.event.startTime}</h3>
+              <h3 className="subtitle"> Ticket Status : {this.state.event.status}</h3>
             </div>
           </div>
           <div className="heading">A</div>
 
 
+          <div className="heading">
+            <PayPalButton
+              amount={this.state.price}
+              description={this.state.name}
+              onSuccess={this.handleSuccessfulPayment}
+            />
+            <div id="mc_embed_signup">
+              <form action="https://github.us18.list-manage.com/subscribe/post?u=59db66124013cd520fd3937ea&amp;id=7312abcb99" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
+                <div id="mc_embed_signup_scroll">
+                  {/* <label htmlFor="mce-EMAIL">Subscribe to our mailing list</label>
+                  <input type="email" value="" name="EMAIL" className="email" id="mce-EMAIL" placeholder="email address" required>
+                  </input>
+                  <div aria-hidden="true"><input name="b_59db66124013cd520fd3937ea_7312abcb99" tabIndex="-1" value=""></input></div> */}
+                  <div className="clear"><input type="submit" value="Subscribe to our mailing list for new events info" name="subscribe" id="mc-embedded-subscribe" className="button"></input></div>
+                </div>
+              </form>
+            </div>
+          </div>
 
 
           <div className="columns">
@@ -70,7 +101,12 @@ class EventsShow extends React.Component {
               <h3 className="title">Description</h3>
               <h4 className="subtitle">{this.state.event.description}</h4>
             </div>
-            <h3 className="subtitle">  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <h3 className="paypal">
+              <PayPalButton
+                amount={this.state.price}
+                description={this.state.name}
+                onSuccess={this.handleSuccessfulPayment}
+              />
             </h3>
           </div>
 
@@ -88,10 +124,27 @@ class EventsShow extends React.Component {
           <div className="columns">
             <div className="column is-half is-offset-one-quarter">
               <Slider {...settings}>
-                <img src="https://somoconcerts.com/wp-content/uploads/2018/03/SOMO_Slider_1800_crowd_3-0x0.jpg" />
-                <img src="https://countryclones.com/wp-content/uploads/2017/11/2018-country-concerts.png" />
-                <img src="https://data1.ibtimes.co.in/cache-img-0-450/en/full/692210/1530683754_harry-kane-celebrating-his-goal-vs-colombia.jpg" />
+                {/* <Player>
+                  <source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
+                </Player> */}
+                {/* <Link to={`/events/${event._id}`}> */}
+                {this.state.events.map(event =>
+                  <div key={event._id} className="card">
+                    <div className="card-image">
+                      <figure className="image">
+                        <img src={event.image} />
+                      </figure>
+                    </div>
+                    <div className="card-content">
+                      <div className="content">
+                        <h2 className="title">{event.name}</h2>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {/* </Link> */}
               </Slider>
+
             </div>
           </div>
         </div>

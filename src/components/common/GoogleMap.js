@@ -16,17 +16,6 @@ class GoogleMap extends React.Component {
       position: this.props.location
     });
 
-    // const autocomplete = new google.maps.places.Autocomplete(this.mapCanvas[0]);
-    //
-    // this.autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), {});
-    //
-    // this.autocomplete.addListener('place_changed', () => {
-    //   console.log('place_changed')
-    //   const place = autocomplete.getPlace();
-    //   const location = place.geometry.location.toJSON();
-    //   this.state.updateLocation({ location });
-    //   this.setState(place.formatted_address);
-    // });
   }
 
   componentWillUnmount() {
