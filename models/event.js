@@ -7,6 +7,7 @@ const eventSchema = new mongoose.Schema({
   startTime: { type: String },
   type: { type: String, enum: ['Sport', 'Music', 'Learning', 'Theatre', 'Food & Drink', 'Gaming', 'Other'] },
   status: { type: String, enum: ['Buying', 'Selling', 'Just Looking'] },
+  price: {type: Number },
   image: { type: String, required: 'This field is required' },
   description: { type: String, required: 'This field is required' },
   location: {

@@ -12,6 +12,7 @@ mongoose.connect(dbURI, (err, db) => {
       date: '2018-07-11',
       startTime: '17:00',
       status: 'Selling',
+      price: 10.00,
       type: 'Sport',
       image: 'https://www.bst-hydepark.com/assets/img/BST-Football-Event-900x560-a6957ce2a4.jpg',
       description: 'We are thrilled to share the news that the Mayor of London and Secretary of State have officially announced a huge public screening of Croatia v England at Barclaycard presents British Summer Time Hyde Park.',
@@ -22,6 +23,7 @@ mongoose.connect(dbURI, (err, db) => {
       startTime: '13:00',
       type: 'Music',
       status: 'Selling',
+      price: 80.00,
       image: 'https://ents24.imgix.net/image/000/307/642/6ffbe95df6aa40cbc64f99def0fbe279fe23649c.jpg?w=358&h=268&auto=format',
       description: 'Bestival takes place between Thursday 2nd and Sunday 5th August at The Lulworth Estate – an enchanting, wooded country estate on Dorset’s Jurassic Coast.',
       location: { lat: 50.639285, lng: -2.208757 }
@@ -31,6 +33,7 @@ mongoose.connect(dbURI, (err, db) => {
       startTime: '14:00',
       type: 'Music',
       status: 'Selling',
+      price: 80.00,
       image: 'https://media.timeout.com/images/102150183/1372/772/image.jpg',
       description: 'Consistently one of the finest festivals in London, catering for cool kids and party monsters alike, Lovebox 2018 packs as much fun into two days as many festivals manage in three. After 13 years in east London’s Victoria Park, Lovebox is heading south for 2018, to Gunnersbury Park. It’s a change in location, but the music policy will no doubt remain the same eclectic, enticing mix of, well, everything really – from DJs to arty bands to feelgood pop to indie, plus the usual mix of kooky entertainment and activities alongside.',
       location: { lat: 51.498204, lng: -0.292464 }
@@ -39,6 +42,7 @@ mongoose.connect(dbURI, (err, db) => {
       date: '2018-07-31',
       startTime: '19:00',
       status: 'Selling',
+      price: 0.00,
       type: 'Learning',
       image: 'https://rb-website.cdn.prismic.io/rb-website/a337ea29ee9e837e6401a2d002e20a5978ca3eaa_react-poster.jpg',
       description: 'React is having a huge impact on the way we think about Web UI development. These monthly Meetups are an opportunity to learn why and share experiences. This is a sociable group and very welcoming to newcomers',
@@ -48,6 +52,7 @@ mongoose.connect(dbURI, (err, db) => {
       date: '2018-08-07',
       startTime: '19:30',
       status: 'Selling',
+      price: 0.00,
       type: 'Learning',
       image: 'https://www.popwebdesign.net/popart_blog/wp-content/uploads/2015/11/women-and-coding3.jpg',
       description: 'Come and join us for our regular Tuesday evening meetup and participate in any one of a number of peer-led JavaScript coding activities, including freecodecamp and codewars challenges. This meetup is for women who want to learn to code. During the meetup we encourage participants to work together with another meetup attendee on one laptop (pair programming). Students from the current cohort of Founders & Coders will be available for questions and support.',
@@ -57,6 +62,7 @@ mongoose.connect(dbURI, (err, db) => {
       date: '2018-08-12',
       startTime: '16:00',
       status: 'Selling',
+      price: 0.00,
       type: 'Sport',
       image: 'https://as01.epimg.net/en/imagenes/2017/03/31/football/1490959169_888552_1490959224_noticia_normal.jpg',
       description: 'Reigning Premier League champions Manchester City kick off the new season at the Emirates in North London for what will surely be an action packed match. Will be odd for the Arsenal fans not having Arsene Wenger in the dugout after 20+ years at the helm.',
@@ -66,6 +72,7 @@ mongoose.connect(dbURI, (err, db) => {
       date: '2018-07-21',
       startTime: '13:30',
       status: 'Selling',
+      price: 0.00,
       type: 'Gaming',
       image: 'https://www.retroreport.org/uploads/1460935513521_RR276_THUMB_ALT2_D&D_DRAGON_PLAYER_MANUAL.jpg',
       description: 'There is no charge, membership fee or subscription. However, a collection tin may be circulated by the Organiser/Assistant Organiser towards the running of the Meetup. Contributions are purely voluntary though: you are under no obligation. We do not record who donates what. You do not have to have previous experience of D&D or another tabletop role-playing game. You do not have to bring or prepare anything. We can lend you everything you need including a pre-generated character. If you do have dice, paper and pencils, please bring them though.',
@@ -75,6 +82,7 @@ mongoose.connect(dbURI, (err, db) => {
       date: '2018-09-28',
       startTime: '07:00',
       status: 'Selling',
+      price: 100.00,
       type: 'Sport',
       image: 'https://www.gogolfing.net.au/wp-content/uploads/2017/10/2018-Ryder-Cup-Course-Graphic.jpg',
       description: 'The 42nd Ryder Cup Matches will be held in France from 28–30 September 2018 at the Albatros Course of Le Golf National in Saint-Quentin-en-Yvelines, a suburb southwest of Paris. It will be the second Ryder Cup to be held in Continental Europe, after the 1997 contest, which was held in Spain. The United States is the defending champion, but has lost the last five matches in Europe, having last won there in 1993.',
@@ -84,10 +92,41 @@ mongoose.connect(dbURI, (err, db) => {
       date: '2018-07-26',
       startTime: '19:00',
       status: 'Selling',
+      price: 5.00,
       type: 'Music',
       image: 'http://www.hiphopkaraoke.co.uk/wp-content/uploads/2017/05/QOH17-copy.jpg',
       description: 'We’re super excited to announce that the UK’s Original Hip Hop Karaoke and one of London’s most legendary weekly events takes a NEW WEEKLY Thursday residency at the Queen Of Hoxton! Over the years Hip Hop Karaoke has established itself as a a true ‘bucket list’ experience at both their London and national residencies and all major UK festivals and has seen thousands of amateurs and more than a few celebs on stage with DJ Rob Pursey, Host Bobby Champagne Jr. and the extended Hip Hop Karaoke family. Whether you want to go classic with some Biggie, Missy or The Fugees or keep it right now with Drake, Kendrick Lamar or Kanye, this is your chance to live out your rap fantasies to London’s most loving crowd. With hundreds of rap songs to choose from, all those years of rapping along in clubs, in the car, or in front of a mirror have lead to this moment! Lose yourself!',
       location: { lat: 51.522135, lng: -0.0834237 }
+    }, {
+      name: 'Taste of London Festive Edition',
+      date: '2018-11-15',
+      startTime: '18:00',
+      status: 'Selling',
+      price: 30.00,
+      type: 'Food & Drink',
+      image: 'https://c.ststat.net/content/EntImg/Tour/taste-of-london-the-festive-edition-757763021-300x300.png',
+      description: 'Taste of London is the highlight of the summer foodie calendar, as London’s latest, greatest and most exciting restaurants serve up taster size signature dishes, world-class chefs cook up a storm live on stage and, as always, many opportunities to get hands-on with interactive masterclasses and shop from an array of more than 200 food and drink purveyors. Taste of London: The Festive Edition, the little sister to the summer festival, is the perfect way to kick off the Christmas season in style. Between 15 – 18 November 2018 East London’s stunning Tobacco Dock will be transformed into a foodie wonderland brimming with London’s tastiest food, festive tipples, a fantastic chef line-up, loads of masterclasses to get involved with and all the shopping you need to get set for the Christmas season.',
+      location: { lat: 51.5081761, lng: -0.0595714 }
+    }, {
+      name: 'Oktoberfest',
+      date: '2018-09-22',
+      startTime: '11:00',
+      status: 'Selling',
+      price: 30.00,
+      type: 'Food & Drink',
+      image: 'https://www.oktoberfest.net/wp-content/uploads/2012/09/Hippodrome-oktoberfest.jpg',
+      description: 'On Saturday, September 22nd, the Schottenhamel tent is the place to be, if you want to catch the official opening ceremonies. At noon, the Mayor of Munich will have the honor of tapping the first keg of Oktoberfest beer. Once the barrel has been tapped, all visitors will then be allowed to quench their thirst. It pays to arrive early in order to experience the festivities up close and personal and it\'s quite common for visitors to come around 9 am to secure good seats. The festival will go until October 7th.',
+      location: { lat: 48.1304812, lng: 11.5464351 }
+    }, {
+      name: 'Childish Gambino @ 02 Arena',
+      date: '2018-11-04',
+      startTime: '19:00',
+      status: 'Selling',
+      price: 50.00,
+      type: 'Music',
+      image: 'http://www.brooklynvegan.com/files/2018/07/gambino.jpg?w=630&h=397&zc=1&s=0&a=t&q=89',
+      description: ' Donald Glover’s set features bold choreography, chilling falsetto screams and dramatised facial expressions reminiscent of those in the viral video for his polemic hit This Is America – with which he ends the show, to scenes of synchronised thumping chaos. Throughout, Gambino manages to apply a newfound scale to himself and his music, and in doing so, reinforces his position as an unstoppable entity on the brink of another new, exciting chapter.',
+      location: { lat: 51.503038, lng: 0.0031543 }
     }]))
     .then(events => console.log(`${events.length} events created`))
     .catch(err => console.log(err))

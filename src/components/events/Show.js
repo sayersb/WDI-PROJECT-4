@@ -72,15 +72,14 @@ class EventsShow extends React.Component {
 
               <h3 className="subtitle"> Start Time : {this.state.event.startTime}</h3>
               <h3 className="subtitle"> Ticket Status : {this.state.event.status}</h3>
+
+              <h3 className="subtitle"> Price  : £{this.state.event.price.toFixed(2)}</h3>
+
             </div>
           </div>
 
           <div className="heading">
-            <PayPalButton
-              amount={this.state.price}
-              description={this.state.name}
-              onSuccess={this.handleSuccessfulPayment}
-            />
+
             <div id="mc_embed_signup">
               <form action="https://github.us18.list-manage.com/subscribe/post?u=59db66124013cd520fd3937ea&amp;id=7312abcb99" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
                 <div id="mc_embed_signup_scroll">
@@ -108,7 +107,7 @@ class EventsShow extends React.Component {
               />
             </h3>
           </div>
-
+          <hr />
           {/* <div className="columns">
           <div className="column is-offset-one-fifth"> */}
           <h3 className="title">Location</h3>
@@ -120,7 +119,7 @@ class EventsShow extends React.Component {
 
           <hr />
 
-          <h1 className="title">Other Events you may also like</h1>
+          <h1 className="title">Other events you may also like</h1>
 
           <div className="columns">
             <div className="column is-half is-offset-one-quarter">
