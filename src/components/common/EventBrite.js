@@ -25,13 +25,13 @@ class EventBrite extends React.Component {
     return (
       <section className="section">
         <div className="container">
-          <h1 className="title"> EVENTS </h1>
+          <h1 className="title"> AFFILIATE EVENTS </h1>
           {this.state.events.map(event =>
-            <div key={event.id}>{event.name.text}</div>
+            <div key={event.id}>{event.name.text}<a href="https://www.eventbrite.com/">  ➡️ {event.url} <hr /></a></div>
           )}
-          {this.state.events.map(event =>
-            <div key={event.id}>{event.url}</div>
-          )}
+          {/* {this.state.events.map(event =>
+            <div key={event.id}><a href="https://www.eventbrite.com/">{event.url}</a></div>
+          )} */}
 
         </div>
       </section>

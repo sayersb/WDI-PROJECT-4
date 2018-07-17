@@ -127,6 +127,66 @@ mongoose.connect(dbURI, (err, db) => {
       image: 'http://www.brooklynvegan.com/files/2018/07/gambino.jpg?w=630&h=397&zc=1&s=0&a=t&q=89',
       description: ' Donald Glover’s set features bold choreography, chilling falsetto screams and dramatised facial expressions reminiscent of those in the viral video for his polemic hit This Is America – with which he ends the show, to scenes of synchronised thumping chaos. Throughout, Gambino manages to apply a newfound scale to himself and his music, and in doing so, reinforces his position as an unstoppable entity on the brink of another new, exciting chapter.',
       location: { lat: 51.503038, lng: 0.0031543 }
+    }, {
+      name: 'Play Expo Manchester',
+      date: '2019-05-04',
+      startTime: '11:00',
+      status: 'Selling',
+      price: 22.00,
+      type: 'Gaming',
+      image: 'https://cdn.arstechnica.net/wp-content/uploads/2014/05/arcade-9.jpg',
+      description: 'The UK’s favourite arcade, indie and retro games show will return in 2019! Close to 1000 consoles, handhelds, computers, arcades, pinballs and PC\'s all running the very best in classic and modern video games and all free to play! Organised by experienced video game events specialists Replay Events the show will be full with features, exhibitors and more gaming mayhem than Manchester has ever seen. Jam packed with everything you love about gaming and popular culture, the show has something for everyone. PLAY Expo Manchester - Modern Gaming, Indie, Retro, Arcade, Pinball, Minecraft, VR, LAN, Guests, Merchandise, Cosplay, Tournaments, Education, Communities, Tabletop Gaming, Photo Shoots and More!',
+      location: { lat: 53.4765664, lng: -2.2464412 }
+    }, {
+      name: 'Star Wars Burlesque : Empire Strips Back',
+      date: '2019-06-05',
+      startTime: '11:00',
+      status: 'Selling',
+      price: 60.00,
+      type: 'Theatre',
+      image: 'http://www.4search.com/cache/images/web/featured/fullsize/www.dailynews.com/4070373-fullsize.jpg',
+      description: 'As part of the act’s sojourn across the Golden State, it will make stops at Los Angeles’ The Theatre at Ace Hotel and San Francisco’s The Warfield. Tickets for these bawdy, hilarious and strictly 18 and over performances are on sale now. The Empire Strips Back: A Burlesque Parody” is the brainchild of Australian theatre auteur Russall S. Beattie. Initially created as a gag, “Empire Strips Back” is a titillating and profoundly funny burlesque show that brings elements of striptease, song and dance numbers and comedy to iconic “Star Wars” cinematic universe. As such, attendees can expect such delights as “sexy storm troopers, a Darth with a different kind of dark side and the droids you’re looking for and much more.',
+      location: { lat: 37.7821989, lng: -122.4131746 }
+    }, {
+      name: 'England v South Africa Autumn International',
+      date: '2018-11-03',
+      startTime: '15:00',
+      status: 'Selling',
+      price: 55.00,
+      type: 'Sport',
+      image: 'http://www.atstickets.com/manager/categoryimages/category_1106.jpg',
+      description: 'England will face South Africa at Twickenham Stadium on Saturday 3rd November during the Quilter Internationals 2018. This will be the first of four autumn internationals to be played by England in 2018. England recently completed a three-test series against the Springboks. South Africa won the first two tests, 42-39 in Johannesburg and 23-12 in Bloemfontein, whilst England won the third test 25-10 in Cape Town. England and South Africa have contested a total of 41 rugby test matches since their first meeting in 1906. England have won 14 of those matches, whilst South Africa have won 25 matches. There have also been two drawn matches between the two sides.',
+      location: { lat: 51.4552073, lng: -0.3427826 }
+    }, {
+      name: 'Hamilton',
+      date: '2019-02-04',
+      startTime: '15:00',
+      status: 'Selling',
+      price: 75.00,
+      type: 'Theatre',
+      image: 'https://16909fb34572fd4ac952-c35bae122d75558469a2aaccf4fd315e.ssl.cf3.rackcdn.com/artistpic_254000-1497448057.jpg',
+      description: 'Hamilton: An American Musical is a sung and rapped through musical about the life of American Founding Father Alexander Hamilton, with music, lyrics, and book by Lin-Manuel Miranda, inspired by the 2004 biography Alexander Hamilton by historian Ron Chernow. Incorporating hip hop, R&B, pop, soul, traditional-style show tunes, and color-conscious casting of non-white actors as the Founding Fathers and other historical figures, the musical achieved both critical acclaim and box office success.',
+      location: { lat: 51.496876, lng: -0.1425189 }
+    }, {
+      name: 'The Great British Beer Festival',
+      date: '2018-08-07',
+      startTime: '12:00',
+      status: 'Selling',
+      price: 11.00,
+      type: 'Food & Drink',
+      image: 'https://olympia.london/sites/default/files/styles/sidebar_variable__wide/public/events/GBBF_LOGO_new.png?itok=fjcg3RGE',
+      description: 'Living up to its reputation as Britain/’s ultimate beer festival, The Great British Beer Festival will showcase over 900 real ales and other craft beers including ciders, perries, fine wines and gin; all served from over 30 bars.Tutored tasting sessions to help you learn more about the brews you’re sampling will be available and can be enjoyed alongside some fantastic street food. Enjoy live music and partake in pub quizzes as well as find out which beer will be crowned the 2018 Champion Beer of Britain, one of the most prestigious beer competitions in the world.',
+      location: { lat: 51.4965005, lng: -0.2106881 }
+    }, {
+      name: 'Euro 2020 Final',
+      date: '2020-06-24',
+      startTime: '19:00',
+      status: 'Selling',
+      price: 200.00,
+      type: 'Sport',
+      image: 'http://www.faw.cymru/files/5615/1265/9256/EURO_2020.png',
+      description: 'It\'s coming home...',
+      location: { lat: 51.5560208, lng: -0.2795188 }
     }]))
     .then(events => console.log(`${events.length} events created`))
     .catch(err => console.log(err))

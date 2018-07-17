@@ -4,6 +4,7 @@ import React from 'react';
 class PayPalButton extends React.Component {
 
   componentDidMount() {
+    console.log(this.props.amount);
     paypal.Button.render({
       env: 'sandbox',
       client: {
