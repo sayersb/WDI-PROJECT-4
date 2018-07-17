@@ -56,6 +56,7 @@ class EventsShow extends React.Component {
      //     <button className="button is-danger" onClick={this.handleDelete}>Delete</button>
      //   </div>
      // </div>
+
      <div>
        <div className="container">
          <div className="columns">
@@ -82,11 +83,13 @@ class EventsShow extends React.Component {
                  <input type="email" value="" name="EMAIL" className="email" id="mce-EMAIL" placeholder="email address" required>
                  </input>
                  <div aria-hidden="true"><input name="b_59db66124013cd520fd3937ea_7312abcb99" tabIndex="-1" value=""></input></div> */}
-                 <div className="clear"><input type="submit" value="Subscribe to our mailing list for new events info" name="subscribe" id="mc-embedded-subscribe" className="button"></input></div>
+                 <div className="clear"><input type="submit" value="Subscribe to our mailing list for new events info" name="subscribe" className="button"></input></div>
                </div>
              </form>
            </div>
          </div>
+
+
 
          <div className="columns">
            <div className="column is-four-fifths">
