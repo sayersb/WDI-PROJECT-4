@@ -49,9 +49,9 @@ class EventsShow extends React.Component {
     const settings = {
       centerMode: true,
       centerPadding: '60px',
-      slidesToShow: 1
-      // autoplay: true,
-      // autoplaySpeed: 1500
+      slidesToShow: 1,
+      autoplay: true,
+      autoplaySpeed: 1500
     };
     return (
       //     <Link className="button" to={`/events/${this.state.event._id}/edit`}>Edit</Link>
