@@ -7,8 +7,7 @@ import Promise from 'bluebird';
 import GoogleMap from '../common/GoogleMap';
 import AudioImage from '../common/AudioImage';
 import PayPalButton from '../common/PayPalButton';
-// import Sticky from 'react-sticky-state';
-// import { Player } from 'video-react';
+
 
 class EventsShow extends React.Component {
 
@@ -95,8 +94,8 @@ class EventsShow extends React.Component {
            </div>
            <h3 className="paypal">
              <PayPalButton
-               amount={this.state.price}
-               description={this.state.name}
+               amount={this.state.event.price}
+               description={this.state.event.name}
                onSuccess={this.handleSuccessfulPayment}
              />
            </h3>
