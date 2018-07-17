@@ -78,6 +78,11 @@ class EventsShow extends React.Component {
           </div>
 
           <div className="heading">
+            <PayPalButton
+              amount={this.state.price}
+              description={this.state.name}
+              onSuccess={this.handleSuccessfulPayment}
+            />
             <div id="mc_embed_signup">
               <form action="https://github.us18.list-manage.com/subscribe/post?u=59db66124013cd520fd3937ea&amp;id=7312abcb99" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
                 <div id="mc_embed_signup_scroll">
@@ -142,10 +147,6 @@ class EventsShow extends React.Component {
                 )}
                 {/* </Link> */}
               </Slider>
-
-
-
-
 
             </div>
           </div>

@@ -12,6 +12,7 @@ import AuthLogin from './components/auth/Login';
 import ProtectedRoute from './components/common/ProtectedRoute';
 import AuthRegister from './components/auth/Register';
 import Navbar from './components/common/Navbar';
+import Footer from './components/common/Footer';
 import FlashMessages from './components/common/FlashMessages';
 // import Search from './components/common/Search';
 import EventBrite from './components/common/EventBrite';
@@ -44,6 +45,7 @@ class App extends React.Component {
               </Switch>
             </div>
           </section>
+          <Footer />
         </main>
       </BrowserRouter>
     );
