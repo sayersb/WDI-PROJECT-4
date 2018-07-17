@@ -19,6 +19,7 @@
   }
 }
 
+
 .card:hover {
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
@@ -80,9 +81,13 @@ body{
 
 
 /* show page*/
-.audio-image{
-  height: 700px;
+.top-image{
+  display: flex;
+  height: 500px;
   width: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1{
@@ -134,6 +139,22 @@ h4{
   font-size:14px;
   font-family: Helvetica,Arial,sans-serif;
    width:100%;
+}
+.carousel-card {
+  height: 320px;
+  width: 500px;
+  .image{
+    display: flex;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+
+.slick-slide > div {
+    margin: 0 10px;
 }
 
 /* footer */

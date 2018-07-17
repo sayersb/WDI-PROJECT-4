@@ -18,6 +18,11 @@ class GoogleMap extends React.Component {
 
   }
 
+  componentDidUpdate() {
+    this.map.setCenter(this.props.location);
+    this.marker.setPosition(this.props.location);
+  }
+
   componentWillUnmount() {
     // console.log('I\'m dying!');
     //good for tidying stuff up, components that shut down and are destroyed when leaving, even though the dom element is destroyed the memory is taken up, below frees up that memory space

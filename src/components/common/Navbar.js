@@ -26,7 +26,6 @@ class Navbar extends React.Component {
   }
 
   render() {
-    console.log(this.props.location.pathname);
     return (
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
@@ -39,7 +38,7 @@ class Navbar extends React.Component {
             aria-label="menu"
             aria-expanded="false"
             onClick={this.toggleNavbar}>
-            
+
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
