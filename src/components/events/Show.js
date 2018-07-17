@@ -78,8 +78,8 @@ class EventsShow extends React.Component {
               <h3 className="subtitle"> Price  : £{this.state.event.price.toFixed(2)}</h3>
             </div>
           </div>
-
           <div className="heading">
+
             <div id="mc_embed_signup">
               <form action="https://github.us18.list-manage.com/subscribe/post?u=59db66124013cd520fd3937ea&amp;id=7312abcb99" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
                 <div id="mc_embed_signup_scroll">
