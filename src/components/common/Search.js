@@ -58,7 +58,8 @@ class Search extends Component {
     return (
       <form>
         <input
-          placeholder="Search for..."
+          className="tm-search"
+          placeholder="Search TicketMaster..."
           onChange={this.handleChange}
         />
         {/* get some elements in here that render only when there is this.state.pickeEvent */}

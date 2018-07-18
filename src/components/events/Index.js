@@ -50,12 +50,12 @@ class EventsIndex extends React.Component {
 
 
       <section>
-        <Search />
         <section>
-          <div className="filters">
-            <input className="input" placeholder="Search our events..." onChange={this.handleSearch} />
-
-            <div className="control">
+          <div className="columns">
+            <div className="filters column">
+              <input className="input" placeholder="Search our events..." onChange={this.handleSearch} />
+            </div>
+            <div className="control column">
               <div className="select is-fullwidth">
                 <select onChange={this.handleSort}>
                   <option value="name|asc">Filter by...</option>
@@ -66,6 +66,7 @@ class EventsIndex extends React.Component {
               </div>
             </div>
           </div>
+
           <hr />
 
           <div className="columns is-multiline">
@@ -90,6 +91,7 @@ class EventsIndex extends React.Component {
               </div>
             )}
           </div>
+          <Search />
         </section>
       </section>
 
