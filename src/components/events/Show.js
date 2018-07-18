@@ -31,6 +31,7 @@ class EventsShow extends React.Component {
     if(prevProps.location.pathname !== this.props.location.pathname) {
       axios.get(`/api/events/${this.props.match.params.id}`)
         .then(res => this.setState({ event: res.data }));
+      window.scrollTo(0, 0);
     }
   }
 
@@ -70,7 +71,7 @@ class EventsShow extends React.Component {
             <div className="column">
               <h2 className="title">{this.state.event.name}</h2>
               <hr />
-              <h3 className="subtitle">  {this.state.event.type}</h3>
+              <h3 className="subtitle">Event type: {this.state.event.type}</h3>
               <h3 className="subtitle"> {this.state.event.date}</h3>
 
               <h3 className="subtitle"> Start Time : {this.state.event.startTime}</h3>
@@ -78,8 +79,8 @@ class EventsShow extends React.Component {
               <h3 className="subtitle"> Price  : £{this.state.event.price.toFixed(2)}</h3>
             </div>
           </div>
-
           <div className="heading">
+
             <div id="mc_embed_signup">
               <form action="https://github.us18.list-manage.com/subscribe/post?u=59db66124013cd520fd3937ea&amp;id=7312abcb99" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
                 <div id="mc_embed_signup_scroll">
