@@ -25,7 +25,7 @@ mongoose.connect(dbURI, (err, db) => {
       status: 'Selling',
       price: 80.00,
       image: 'https://ents24.imgix.net/image/000/307/642/6ffbe95df6aa40cbc64f99def0fbe279fe23649c.jpg?w=358&h=268&auto=format',
-      description: 'Bestival takes place between Thursday 2nd and Sunday 5th August at The Lulworth Estate – an enchanting, wooded country estate on Dorset’s Jurassic Coast.',
+      description: 'The wonderful world of Bestival was born out of ten fun years of pioneering music events and record releases from Rob da Bank’s Sunday Best empire. The renowned music specialist had a dream to create his vision of the modern-day festival. Along with Creative Director and wife Josie da Bank and co-founders/partners John and Ziggy from Get Involved that dream is now reality. On a mission to change the face of independent festival culture, the fearless foursome are spreading the love worldwide. It’s Rob and Josie da Bank’s creative vision that sets Bestival apart. While the massive musical brain of Rob ensures the Bestival line-up is the most eclectic you’ll ever experience, it’s Josie’s creative wand that casts its magic over Bestival land. From the most original boutique campsite experience, to the Bollywood Tent, the incredible world of Caravanserai, fancy dress en masse and even a landlocked port, it’s this uniqueness that makes Bestival a wondrous world of discovery and adventure that will inspire peace, love and dancing not only in August, but all year round…',
       location: { lat: 50.639285, lng: -2.208757 }
     }, {
       name: 'Lovebox',
@@ -62,7 +62,7 @@ mongoose.connect(dbURI, (err, db) => {
       date: '2018-08-12',
       startTime: '16:00',
       status: 'Selling',
-      price: 0.00,
+      price: 89.00,
       type: 'Sport',
       image: 'https://as01.epimg.net/en/imagenes/2017/03/31/football/1490959169_888552_1490959224_noticia_normal.jpg',
       description: 'Reigning Premier League champions Manchester City kick off the new season at the Emirates in North London for what will surely be an action packed match. Will be odd for the Arsenal fans not having Arsene Wenger in the dugout after 20+ years at the helm.',

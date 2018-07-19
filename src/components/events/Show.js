@@ -6,7 +6,7 @@ import Slider from 'react-slick';
 import Promise from 'bluebird';
 import GoogleMap from '../common/GoogleMap';
 // import AudioImage from '../common/AudioImage';
-import PayPalButton from '../common/PayPalButton';
+import PayPalButton from '../common/PaypalButton';
 
 
 class EventsShow extends React.Component {
@@ -31,6 +31,7 @@ class EventsShow extends React.Component {
     if(prevProps.location.pathname !== this.props.location.pathname) {
       axios.get(`/api/events/${this.props.match.params.id}`)
         .then(res => this.setState({ event: res.data }));
+      window.scrollTo(0, 0);
     }
   }
 
@@ -79,6 +80,8 @@ class EventsShow extends React.Component {
             </div>
           </div>
 
+          <hr />
+
           <div className="heading">
             <div id="mc_embed_signup">
               <form action="https://github.us18.list-manage.com/subscribe/post?u=59db66124013cd520fd3937ea&amp;id=7312abcb99" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>
@@ -90,6 +93,9 @@ class EventsShow extends React.Component {
               </form>
             </div>
           </div>
+
+          <hr />
+
 
           <div className="columns">
             <div className="column is-four-fifths">
@@ -105,13 +111,15 @@ class EventsShow extends React.Component {
             </h3>
           </div>
 
+          <hr />
+
+
           <h3 className="title">Location</h3>
           <GoogleMap location={this.state.event.location} />
 
           <hr />
 
           <h1 className="title">Other Events you may also like</h1>
-
           <div className="columns">
             <div className="column is-half is-offset-one-quarter">
               <Slider {...settings}>

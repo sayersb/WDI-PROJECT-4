@@ -5,12 +5,13 @@
 }
 
 /* bulma cards on index.js page*/
-.card{
+.card {
   height: 100%;
   width: 100%;
-  border-style: outset;
-  border-color: #AD974F;
-  .image{
+  border-radius: 25px;
+  border-style: none;
+  background-color: #fe8a71;
+  .image {
     display: flex;
     height: 200px;
     background-position: center;
@@ -47,11 +48,9 @@
 
 /* index page background styling*/
 
-body{
-  background: linear-gradient(#1488cc, #191970);
-  color:white;
-  // width:1700px;
-  // height:1000px;
+body {
+  background: linear-gradient(to bottom right, #0e9aa7, #3da4ab);
+  font-family: 'Russo One', sans-serif;
   .stars {
     position:absolute;
     top:0;
@@ -61,27 +60,27 @@ body{
     width:100%;
     height:100%;
     display:block;
-    background:url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
     z-index:0;
   }
 }
 
 /* text color*/
-.subtitle{
-  color: white;
+.subtitle {
+
+  color: black;
+  text-align: left;
 }
 
-.title{
-  color: white;
+.title {
+  color: black;
 }
 
-.field{
+.field {
   color: white;
 }
-
 
 /* show page*/
-.top-image{
+.top-image {
   display: flex;
   height: 500px;
   width: 700px;
@@ -90,15 +89,15 @@ body{
   background-size: cover;
 }
 
-h1{
+h1 {
   text-align: center;
 }
-h4{
+h4 {
   text-align: center;
 }
 
-.heading{
-  background: #ccc;
+.heading {
+  background: hsl(348, 100%, 61%);
   height: 50px;
   line-height: 50px;
   margin-top: 10px;
@@ -108,7 +107,12 @@ h4{
   position: sticky;
   top: 0px;
 }
-.paypal{
+
+#mc-embedded-subscribe {
+  background: hsl(348, 100%, 61%);
+}
+
+.paypal {
   height: 100px;
   width: 100px;
   margin-top:60px;
@@ -116,7 +120,7 @@ h4{
 
 
 /* form text */
-.label{
+.label {
   color:white;
 }
 
@@ -133,8 +137,12 @@ h4{
   }
 }
 
-.mc_embed_signup{
-  background:#fff;
+.button {
+  background-color: #f6cd61;
+}
+
+.mc_embed_signup {
+  background: #fff;
   clear:left;
   font-size:14px;
   font-family: Helvetica,Arial,sans-serif;
@@ -159,17 +167,59 @@ h4{
 
 /* footer */
 
-.footer{
-  background-color: black;
-  opacity: 0.25;
-  color: white;
-}
-
-/* eventbrite */
-
 a {
   color: #FFF;
 }
+
 a:hover {
-   color: #00F
+  color: #00F;
+}
+
+.footer {
+  background-color: #051e3e;
+  // opacity: 0.25;
+  color: white;
+
+  .icon {
+    margin: 10px;
+  }
+}
+
+.footer-info {
+  color: #f6cd61;
+}
+
+.navbar {
+  background-color: #4a4e4d;
+}
+
+.navbar-item {
+  color: #f6cd61;
+  padding: 30px 35px;
+  font-size: 20px;
+}
+
+.control {
+  width: 30%;
+  display: inline;
+}
+
+.filters {
+  width: 40%;
+  display: inline;
+
+}
+
+.tm-search {
+  width: 30%;
+  height: 36px;
+}
+
+.suggestion {
+  width: 30%;
+  height: 36px;
+}
+
+.email, .password, .username, .passwordConfirmation {
+  color: black;
 }
