@@ -6,7 +6,7 @@ import Slider from 'react-slick';
 import Promise from 'bluebird';
 import GoogleMap from '../common/GoogleMap';
 // import AudioImage from '../common/AudioImage';
-import PayPalButton from '../common/PayPalButton';
+import PayPalButton from '../common/PaypalButton';
 
 
 class EventsShow extends React.Component {
