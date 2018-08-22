@@ -2,25 +2,27 @@
 
 ![image](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-## ABC EVENTS - A MERN stack app
+## ABC EVENTS - A MERN stack app - Collaborative Project
 
 ## Intro
+
+This was the final project on the WDI course, the first one using React to create a MERN(MongoDB, Express.js, React & Node.js) stack app.
 
 Technologies implemented : 
 
 
-| JavaScript(ECMAScript6)        | React          | SASS  |
+| JavaScript(ECMAScript6)        | React          | SCSS  |
 | ------------- |:-------------:| -----:|
 | HTML5      | Express | MongoDB |
 | Mongoose      | Node.js      |   Yarn |
-| Bulma |   Filepicker-js   |    Webpack |
+| Bulma |   axios   |    Webpack |
 | jsonwebtoken | bcrypt     |    body-parser |
 | bluebird | Request-Promise     |    babel |
 | chai | mocha     |    satellizer |
 | supertest | sass-loader     |    Trello |
-| supertest | sass-loader     |    Trello |
-| supertest | sass-loader     |    Trello |
-| supertest | sass-loader     |    Trello |
+| lodash | sinon     |    wireframe.cc |
+| Paypal API | Google Maps API with Autocomplete     |    enzyme |
+| MailChimp Subscription API | Eventbrite API     |    Ticketmaster API |
 
 The application has been deployed on [Heroku](https://abc-events.herokuapp.com) 
 
@@ -36,7 +38,7 @@ After being assigned the group we decided to spend some time thinking about idea
 
 ## Issues
 
-  * This was the first collaborative project for all three members of my group, leading to some issues at the beginning of the build process with merges on GitHub. 
+  * We spent too much time thoroughly researching possible API's to implement, many of which we didn't end up using and therefore could have been more productive in the allocation of time for the final product.  
   
   * This was the first collaborative project for all three members of my group, leading to some issues at the beginning of the build process with merges on GitHub.
 
