@@ -4,7 +4,9 @@
 
 ## ABC EVENTS - A MERN stack app - Collaborative Project
 
+
 ## Intro
+
 
 This was the final project on the WDI course, the first one using React to create a MERN(MongoDB, Express.js, React & Node.js) stack app. We were given a week to devise an idea, build and deploy this events and ticketing app.
 
@@ -30,7 +32,9 @@ The application has been deployed on [Heroku](https://abc-events.herokuapp.com)
 *Please be aware that Heroku apps go to sleep after 30 mins of inactivity and may take a little time to load*
 
 
+
 ## Build Process 
+
 
 After being assigned the project, myself and two other members of the class decided to work in a team, assuming the collaborative process would allow us more time to research and implement more outside API's amongs other features. The team set up a Trello board straight away and discussed ideas, leading to the consensus that we should aim to build an app for events. We wanted the users to have the ability to buy or sell tickets securely through the app if the event happened to be sold out, or if sellers were unable to attend an event. The uncertainty over whether the app and user experience would be primarily for events, or as a ticket exchange site, meant the amount of possible relevant outside API's to implement was encouraging.
 
@@ -46,13 +50,16 @@ The styling was touched up as we went along, in comparison to the previous two p
 ## Issues
 
 
+
   * We spent too much time thoroughly researching possible API's to implement, many of which we didn't end up using for varying reasons and therefore could have been more productive in the allocation of time for the final product.  
+  
   
   * Although we managed to implement both the Ticketmaster and Eventbrite API's, the links don't function as originally planned. Given more time we would add in the feature to not only search and be forwarded to the Ticketmaster and Eventbrite events, but have a link to buy the tickets straight from our app.
 
   
   
 ##  Other GA Project Repositories
+
 
 
   * 1st: [Chain Game](https://github.com/sayersb/project-1-wdi)
