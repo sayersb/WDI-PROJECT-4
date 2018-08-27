@@ -23,7 +23,7 @@ Technologies implemented :
 | bluebird | Request-Promise     |    babel |
 | chai | mocha     |    satellizer |
 | supertest | sass-loader     |    Trello |
-| lodash | sinon     |    wireframe.cc |
+| lodash | sinon     |    draw.io |
 | Paypal API | Google Maps API with Autocomplete     |    enzyme |
 | MailChimp Subscription API | Eventbrite API     |    Ticketmaster API |
 
