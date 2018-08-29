@@ -4,6 +4,9 @@
 
 ## ABC EVENTS - A MERN stack app - Collaborative Project
 
+![abc](https://github.com/sayersb/WDI-PROJECT-4/blob/master/abcevents1.gif?raw=true)
+
+
 
 ## Intro
 
