@@ -41,12 +41,23 @@ The application has been deployed on [Heroku](https://abc-events.herokuapp.com)
 
 After being assigned the project, myself and two other members of the class decided to work in a team, assuming the collaborative process would allow us more time to research and implement more outside API's amongs other features. The team set up a Trello board straight away and discussed ideas, leading to the consensus that we should aim to build an app for events. We wanted the users to have the ability to buy or sell tickets securely through the app if the event happened to be sold out, or if sellers were unable to attend an event. The uncertainty over whether the app and user experience would be primarily for events, or as a ticket exchange site, meant the amount of possible relevant outside API's to implement was encouraging.
 
+![image](https://github.com/sayersb/WDI-PROJECT-4/blob/master/Trello.png?raw=true)
 
-After implementing the Ticketmaster and EventBrite API's we discovered the data was not as easy to manipulate into making new events and buying/selling tickets directly through our app as originally thought. At this stage a user was able to create an eventa and add information, including the visible location using the Google Map and Autocomplete API. The final feature needed to reach our planned MVP was the ability to buy / sell a ticket direclty through our site, leading us to the PayPal Button Manager API. Whilst another team member focused on the PayPal button I researched and implemented the MailChimp subscription API, adding the ability for the user to subscribe to our newsletter mailing list.
+
+After implementing the Ticketmaster and EventBrite API's we discovered the data was not as easy to manipulate into making new events and buying/selling tickets directly through our app as originally thought. At this stage a user was able to create an event and add information, including the visible location using the Google Map and Autocomplete API. 
+
+
+![image](https://github.com/sayersb/WDI-PROJECT-4/blob/master/Common%20Components.png?raw=true)
+
+The final feature needed to reach our planned MVP was the ability to buy / sell a ticket direclty through our site, leading us to the PayPal Button Manager API. Whilst another team member focused on the PayPal button I researched and implemented the MailChimp subscription API, adding the ability for the user to subscribe to our newsletter mailing list.
+
+
+![image](https://github.com/sayersb/WDI-PROJECT-4/blob/master/MailChimp.png?raw=true)
 
 
 The styling was touched up as we went along, in comparison to the previous two projects where this was left until the end of the week. Using Bulma as the framework helped to make the app responsive and usable on mobiles, despite the user experience focus being on a laptop screen sized browser. 
 
+![image](https://github.com/sayersb/WDI-PROJECT-4/blob/master/dependencies.png?raw=true)
 
 
 
